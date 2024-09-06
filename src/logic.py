@@ -8,3 +8,9 @@ class CalculatorLogic:
         except Exception as e:
             result = "Error"
         return result
+
+
+def add( a : int, b : int):
+    return a + b
+
+add("ewrewrew", 3)
