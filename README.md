@@ -1,7 +1,7 @@
-<h1 align="center"> Hog C2 </h1>
+<h1 align="center"> Hog C2: Utility Trojan Executable PoC </h1>
 
 <p align="center">
-  <img src="https://via.placeholder.com/400x150.png?text=Hog+C2+Logo" alt="Hog C2 Logo">
+  <img src="https://github.com/NotSooShariff/portfolio/blob/main/src/assets/hog_c2_banner.png?raw=true" alt="Hog C2 Logo">
 </p>
 
 ## Overview
