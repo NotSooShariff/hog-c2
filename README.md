@@ -1,4 +1,4 @@
-<h1 align="center"> Hog C2 - Utility Trojan (Work in Progress) </h1>
+<h1 align="center"> Hog C2 </h1>
 
 <p align="center">
   <img src="https://via.placeholder.com/400x150.png?text=Hog+C2+Logo" alt="Hog C2 Logo">
