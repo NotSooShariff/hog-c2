@@ -100,7 +100,39 @@ While previous research has focused on Slack, Discord, Telegram, and Google Driv
 
 ## Technical Overview
 
-Hog C2 implements a complete command-and-control framework using Notion's API as the C2 channel. The implant is distributed as "FocusForge"—a legitimate-appearing productivity/time-tracking application built with Tauri (Rust + WebView).
+Hog C2 implements a complete command-and-control framework using Notion's API as the C2 channel. The implant is distributed as "FocusForge"—a **fully functional productivity/time-tracking application** built with Tauri (Rust + WebView).
+
+### The Trojan Horse Design
+
+**This is not just disguised as a productivity tracker—it actually IS one.** The application provides genuine productivity tracking features as a cover story, making it indistinguishable from legitimate software.
+
+**Legitimate Features (Cover Story):**
+- Real-time application usage tracking with charts and analytics
+- Task management with allowed/blocked apps and websites
+- Time tracking dashboard with visual breakdowns
+- Productivity metrics (total time, apps tracked, active tasks)
+- Professional UI with modern design patterns
+
+![FocusForge Dashboard](./public/trojan_dashboard.png)
+*The productivity tracking dashboard - appears completely legitimate to users and administrators*
+
+![Task Management](./public/trojan_screenshot.png)
+*Task creation interface for managing productivity goals - functional and convincing*
+
+**Hidden C2 Features (Malicious Payload):**
+- Background communication with Notion API for command delivery
+- Remote command execution via hidden terminal interface
+- Screenshot exfiltration with timestamp trails
+- System intelligence gathering (RAM, CPU, disk, network)
+- Persistence mechanisms
+
+**Why This Works:**
+
+1. **User Acceptance**: Users willingly install and run the application because it provides real value
+2. **Admin Approval**: IT departments see legitimate productivity software with standard behavior
+3. **EDR Evasion**: Security tools detect normal application activity—tracking apps, displaying charts, reading window titles
+4. **Social Engineering**: "I installed FocusForge to track my productivity" is a believable explanation
+5. **Network Traffic**: Notion API calls for "syncing productivity data" appear completely normal
 
 ### Architecture
 
@@ -165,6 +197,22 @@ Target System                          Notion Infrastructure
 ## Detection Evasion Analysis
 
 ### Why Traditional Detection Fails
+
+#### 0. The Trojan Horse Problem
+
+**The application is genuinely useful.** This is the hardest challenge for defenders:
+
+- It's not a fake app with no functionality—it's a real productivity tracker that users want
+- All application behaviors are legitimate: tracking window titles, monitoring processes, recording time usage
+- Users will defend the application if questioned: "I use this to stay productive!"
+- IT help desk receives requests to whitelist it: "I need FocusForge for my work"
+- The line between legitimate monitoring and malicious surveillance is identical in code
+
+**Consider**: How does security software distinguish between:
+- FocusForge tracking which apps you use → **Legitimate productivity feature**
+- FocusForge reporting which apps you use to Notion → **Malicious system intelligence**
+
+Both use the exact same Windows APIs, same data structures, same network protocols. The only difference is *intent*, which is invisible to automated detection.
 
 #### 1. Domain Reputation Bypass
 
@@ -421,17 +469,17 @@ We encourage researchers to build on this work, develop additional detection met
 
 ## References
 
-- [^1]: Microsoft Purview Data Loss Prevention - [Microsoft Learn](https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp)
-- [^2]: AppOmni, "What 2024's SaaS Breaches Mean for 2025 Cybersecurity" (2024)
-- [^3]: LayerX/Reco, SaaS Security Threat Landscape Reports (2024)
-- [^4]: ESET Threat Reports, CeranaKeeper Analysis (2024)
-- [^5]: n00py, "Introducing Slackor: A Remote Access Tool Using Slack as a C2 Channel" (2019) - [n00py.io](https://www.n00py.io/2019/06/introducing-slackor-a-remote-access-tool-using-slack-as-a-c2-channel/)
-- [^6]: Conscia Security Research, "How Cybercriminals Exploit Legitimate Internet Services for Malicious Purposes" (2024)
-- [^7]: Australian Cyber Security Centre (ACSC), "Identifying and Mitigating Living Off the Land Techniques"
-- [^8]: Salesforce Engineering, "TLS Fingerprinting with JA3 and JA3S" - [GitHub: salesforce/ja3](https://github.com/salesforce/ja3)
-- [^9]: Multiple sources on SSL/TLS inspection performance impact
-- [^10]: Fortinet NGFW ATP Documentation, "Behavioral Analysis Detection" (2024)
-- [^11]: Multiple API security vendors (Traceable, DataDome, Akamai), Behavioral Threat Detection methodologies
+[^1]: Microsoft Purview Data Loss Prevention - [Microsoft Learn](https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp)
+[^2]: AppOmni, "What 2024's SaaS Breaches Mean for 2025 Cybersecurity" (2024)
+[^3]: LayerX/Reco, SaaS Security Threat Landscape Reports (2024)
+[^4]: ESET Threat Reports, CeranaKeeper Analysis (2024)
+[^5]: n00py, "Introducing Slackor: A Remote Access Tool Using Slack as a C2 Channel" (2019) - [n00py.io](https://www.n00py.io/2019/06/introducing-slackor-a-remote-access-tool-using-slack-as-a-c2-channel/)
+[^6]: Conscia Security Research, "How Cybercriminals Exploit Legitimate Internet Services for Malicious Purposes" (2024)
+[^7]: Australian Cyber Security Centre (ACSC), "Identifying and Mitigating Living Off the Land Techniques"
+[^8]: Salesforce Engineering, "TLS Fingerprinting with JA3 and JA3S" - [GitHub: salesforce/ja3](https://github.com/salesforce/ja3)
+[^9]: Multiple sources on SSL/TLS inspection performance impact
+[^10]: Fortinet NGFW ATP Documentation, "Behavioral Analysis Detection" (2024)
+[^11]: Multiple API security vendors (Traceable, DataDome, Akamai), Behavioral Threat Detection methodologies
 
 ---
 
