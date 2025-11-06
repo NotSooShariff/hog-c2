@@ -30,9 +30,36 @@ engagements, CTF competitions, and educational/research purposes only.
 Unauthorized use of this software against systems you do not own or have explicit
 written permission to test is illegal under computer fraud and abuse laws in most
 jurisdictions, including but not limited to:
-- Computer Fraud and Abuse Act (CFAA) in the United States
-- Computer Misuse Act in the United Kingdom
-- Similar legislation in other countries
+
+**United States:**
+- Computer Fraud and Abuse Act (CFAA), 18 U.S.C. § 1030
+
+**United Kingdom:**
+- Computer Misuse Act 1990
+
+**India:**
+- Information Technology Act, 2000:
+  - Section 43: Penalty for damage to computer, computer system, etc. (Compensation up to ₹1 crore)
+  - Section 66: Computer related offences (Imprisonment up to 3 years and/or fine up to ₹5 lakhs)
+  - Section 66B: Punishment for dishonestly receiving stolen computer resource or communication device (Imprisonment up to 3 years and/or fine up to ₹1 lakh)
+  - Section 66C: Punishment for identity theft (Imprisonment up to 3 years and/or fine up to ₹1 lakh)
+  - Section 66D: Punishment for cheating by personation using computer resource (Imprisonment up to 3 years and/or fine up to ₹1 lakh)
+  - Section 66E: Punishment for violation of privacy (Imprisonment up to 3 years and/or fine up to ₹2 lakhs)
+  - Section 66F: Punishment for cyber terrorism (Imprisonment up to life)
+  - Section 70: Protected system (Imprisonment up to 10 years and/or fine)
+- Indian Penal Code, 1860:
+  - Section 378: Theft (Imprisonment up to 3 years and/or fine)
+  - Section 379: Punishment for theft (Imprisonment up to 3 years and/or fine)
+  - Section 405: Criminal breach of trust (Imprisonment up to 3 years and/or fine)
+  - Section 420: Cheating and dishonestly inducing delivery of property (Imprisonment up to 7 years and fine)
+  - Section 463: Forgery (Imprisonment up to 2 years and/or fine)
+  - Section 465: Punishment for forgery (Imprisonment up to 2 years and/or fine)
+  - Section 468: Forgery for purpose of cheating (Imprisonment up to 7 years and fine)
+- Digital Personal Data Protection Act, 2023:
+  - Violations related to unauthorized collection, processing, and transfer of personal data
+  - Penalties up to ₹250 crores for significant data fiduciaries
+
+**Similar legislation exists in other countries worldwide**
 
 By using this software, you agree to:
 1. Only use it on systems you own or have explicit written authorization to test
