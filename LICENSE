@@ -1,0 +1,44 @@
+MIT License
+
+Copyright (c) 2025 Hog C2 Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+IMPORTANT LEGAL NOTICE:
+
+This software is intended for authorized security testing, penetration testing
+engagements, CTF competitions, and educational/research purposes only.
+
+Unauthorized use of this software against systems you do not own or have explicit
+written permission to test is illegal under computer fraud and abuse laws in most
+jurisdictions, including but not limited to:
+- Computer Fraud and Abuse Act (CFAA) in the United States
+- Computer Misuse Act in the United Kingdom
+- Similar legislation in other countries
+
+By using this software, you agree to:
+1. Only use it on systems you own or have explicit written authorization to test
+2. Comply with all applicable local, state, and federal laws
+3. Accept full responsibility for your actions
+4. Not hold the authors liable for any misuse or damages
+
+THE AUTHORS ASSUME NO LIABILITY FOR MISUSE OF THIS SOFTWARE.
+USE AT YOUR OWN RISK.

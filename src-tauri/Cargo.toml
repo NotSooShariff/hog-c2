@@ -1,0 +1,75 @@
+[package]
+name = "app"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["you"]
+license = ""
+repository = ""
+edition = "2021"
+rust-version = "1.77.2"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.5.1", features = [] }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+log = "0.4"
+tauri = { version = "2.9.2", features = ["tray-icon"] }
+tauri-plugin-log = "2.0"
+tauri-plugin-notification = "2.0"
+tauri-plugin-store = "2.0"
+tauri-plugin-autostart = "2.0"
+tauri-plugin-shell = "2.0"
+chrono = { version = "0.4", features = ["serde"] }
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["json", "multipart"] }
+sysinfo = "0.32"
+dotenvy = "0.15"
+screenshots = "0.8"
+base64 = "0.21"
+image = "0.24"
+clap = { version = "4.5", features = ["derive", "env"] }
+dirs = "5.0"
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.58", features = [
+    "Win32_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_System_Threading",
+    "Win32_System_Diagnostics",
+    "Win32_System_Diagnostics_ToolHelp",
+] }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+x11 = "2.21"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+core-foundation = "0.9"
+core-graphics = "0.23"
+
+# Production release profile with maximum optimization
+[profile.release]
+opt-level = 3           # Maximum optimization
+lto = "fat"             # Link Time Optimization (fat = full LTO)
+codegen-units = 1       # Better optimization at cost of compile time
+strip = true            # Strip symbols for smaller binary
+panic = "abort"         # Smaller binary, faster execution
+overflow-checks = false # Disable overflow checks in release
+
+# Development profile
+[profile.dev]
+opt-level = 0
+debug = true
+
+# Profile for testing release builds faster
+[profile.release-test]
+inherits = "release"
+lto = "thin"
+codegen-units = 16

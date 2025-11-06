@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security Disclosure
+    url: https://github.com/NotSooShariff/hog-c2/security/advisories/new
+    about: Report security vulnerabilities privately
+  - name: Discussions
+    url: https://github.com/NotSooShariff/hog-c2/discussions
+    about: Ask questions and discuss ideas with the community
