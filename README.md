@@ -465,9 +465,6 @@ This project contributes to the security research community by:
 
 We encourage researchers to build on this work, develop additional detection methods, and share findings with the community.
 
----
-
-## References
 
 [^1]: Microsoft Purview Data Loss Prevention - [Microsoft Learn](https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp)
 [^2]: AppOmni, "What 2024's SaaS Breaches Mean for 2025 Cybersecurity" (2024)
@@ -488,7 +485,7 @@ We encourage researchers to build on this work, develop additional detection met
 MIT License - See [LICENSE](LICENSE) for details.
 
 By using this software, you agree to use it only for authorized security testing and research purposes.
-
+<!--
 ---
 
 <div align="center">
@@ -497,4 +494,5 @@ By using this software, you agree to use it only for authorized security testing
 
 *Research project by the security community, for the security community*
 
-</div>
+</div> 
+--> 
